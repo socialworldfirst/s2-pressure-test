@@ -143,18 +143,27 @@ table.gantt td, table.gantt th { border-bottom:1px solid var(--hair); }
 table.gantt td span { display:block; height:3px; border-radius:2px; background:transparent; }
 table.gantt td.on span { background:var(--ink); }
 @media (max-width:860px) { .ep-f { grid-template-columns:1fr; gap:4px; } }
+
+.tabs { margin-top:28px; border-top:1px solid var(--hair); padding-top:16px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:9px 20px; align-items:baseline; }
+.tabs .tg { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); white-space:nowrap; }
+.tabs .ti { display:flex; flex-wrap:wrap; gap:4px 18px; }
+.tabs a { text-decoration:none; color:var(--mut); font-size:13.5px; border-bottom:1px solid transparent; padding-bottom:1px; }
+.tabs a:hover { color:var(--ink); border-bottom-color:#c9c4ba; }
+.tabs .cur { color:var(--ink); font-weight:600; border-bottom:1px solid var(--ink); padding-bottom:1px; font-size:13.5px; }
+@media (max-width:860px) { .tabs { grid-template-columns:1fr; gap:2px; } .tabs .tg { margin-top:10px; } }
 </style></head><body>
 <section class="pt-gate" id="pt-gate"><div class="pt-gate-card">
-  <p class="eyebrow">WorldFirst &middot; Internal</p><h1>Episode Slate</h1>
+  <p class="eyebrow">WorldFirst · Internal</p><h1>Episode Slate</h1>
   <p class="sub">Seven picked episodes, and what each one needs.</p>
   <form id="pt-form"><input id="pt-pw" type="password" placeholder="password" autocomplete="off" autocapitalize="off" spellcheck="false" required/><button type="submit">enter</button></form>
   <p class="pt-err" id="pt-err" hidden></p></div></section>
 <div class="pt-app" id="pt-app"><div class="wrap">
   <header class="masthead">
-    <p class="eyebrow">WorldFirst &middot; Internal &middot; 28 Jul 2026 &middot; <a href="episode-panel.html">&larr; episode panel</a> &middot; <a href="./">direction verdict</a> &middot; <a href="platforms.html">platforms</a> &middot; <a href="blank-sheet.html">blank sheet</a> &middot; <a href="peer-pillar-map.html">peer pillar map</a></p>
+    <p class="eyebrow">WorldFirst &middot; Internal &middot; 28 Jul 2026</p>
     <h1>Episode <em>Slate</em></h1>
     <p class="lede">Seven guest conversations, with the guest, the spine, the cuts and the guardrails for each. All seven scored by the same ten-persona panel. Sequenced by dependency, and gated on four clearances that all start this week.</p>
-  </header>
+  <nav class="tabs"><div class="tg">Direction</div><div class="ti"><a href="./">Verdict</a><a href="platforms.html">Platforms</a><a href="blank-sheet.html">Blank sheet</a></div><div class="tg">Evidence</div><div class="ti"><a href="peer-pillar-map.html">Peer pillar map</a><a href="benchmarks.html">Explainer benchmarks</a></div><div class="tg">Production</div><div class="ti"><a href="episode-panel.html">Episode panel</a><span class="cur">Episode slate</span></div><div class="tg">Voice</div><div class="ti"><a href="thought-leadership.html">The research</a><a href="voice-program.html">First voices</a><a href="agencies.html">Agency shortlist</a></div></nav>
+    </header>
   <nav class="side" id="pt-nav"><a href="#s1" data-spy="s1">The slate</a><a href="#s2" data-spy="s2">Access</a><a href="#s3" data-spy="s3">Trust</a><a href="#s4" data-spy="s4">Opportunity</a><a href="#s5" data-spy="s5">Running order</a><a href="#s6" data-spy="s6">Clearances</a><a href="#s7" data-spy="s7">What changed</a></nav>
   <main id="pt-main"></main>
   <footer><span>Encrypted client-side &middot; AES-GCM</span><a href="#" id="pt-lock">lock this device</a></footer>

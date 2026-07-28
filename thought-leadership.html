@@ -57,6 +57,14 @@ a.src:hover { border-bottom-color:var(--ink); }
 .m-p { color:var(--ink); }
 footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; display:flex; gap:18px; }
 @media (max-width:860px) { .wrap { grid-template-columns:1fr; gap:0; } nav.side { position:static; flex-direction:row; flex-wrap:wrap; margin-bottom:18px; } nav.side a { border-left:none; border-bottom:1px solid var(--hair); } .panel { padding:24px 20px; } }
+
+.tabs { margin-top:28px; border-top:1px solid var(--hair); padding-top:16px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:9px 20px; align-items:baseline; }
+.tabs .tg { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); white-space:nowrap; }
+.tabs .ti { display:flex; flex-wrap:wrap; gap:4px 18px; }
+.tabs a { text-decoration:none; color:var(--mut); font-size:13.5px; border-bottom:1px solid transparent; padding-bottom:1px; }
+.tabs a:hover { color:var(--ink); border-bottom-color:#c9c4ba; }
+.tabs .cur { color:var(--ink); font-weight:600; border-bottom:1px solid var(--ink); padding-bottom:1px; font-size:13.5px; }
+@media (max-width:860px) { .tabs { grid-template-columns:1fr; gap:2px; } .tabs .tg { margin-top:10px; } }
 </style>
 </head>
 <body>
@@ -71,9 +79,10 @@ footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; 
 <div class="pt-app" id="pt-app">
   <div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">WorldFirst · Internal · 28 Jul 2026 · <a href="./">← direction verdict</a> · <a href="peer-pillar-map.html">peer pillar map</a> · <a href="platforms.html">platforms</a> · <a href="voice-program.html">first voices →</a> · <a href="agencies.html">agency shortlist →</a></p>
+      <p class="eyebrow">WorldFirst &middot; Internal &middot; 28 Jul 2026</p>
       <h1>Thought Leadership <em>Playbook</em></h1>
       <p class="lede">What B2B companies actually do to produce executive and employee content when the leaders have no time: the extraction model, what it costs, how the paid mechanism works, what the participation numbers really look like, and what goes wrong. Researched from the open record, with every claim marked by source quality.</p>
+    <nav class="tabs"><div class="tg">Direction</div><div class="ti"><a href="./">Verdict</a><a href="platforms.html">Platforms</a><a href="blank-sheet.html">Blank sheet</a></div><div class="tg">Evidence</div><div class="ti"><a href="peer-pillar-map.html">Peer pillar map</a><a href="benchmarks.html">Explainer benchmarks</a></div><div class="tg">Production</div><div class="ti"><a href="episode-panel.html">Episode panel</a><a href="episode-slate.html">Episode slate</a></div><div class="tg">Voice</div><div class="ti"><span class="cur">The research</span><a href="voice-program.html">First voices</a><a href="agencies.html">Agency shortlist</a></div></nav>
     </header>
     <nav class="side" id="pt-nav"><a href="#s1" data-spy="s1">The time objection</a><a href="#s2" data-spy="s2">The extraction model</a><a href="#s3" data-spy="s3">What it costs</a><a href="#s4" data-spy="s4">Thought Leader Ads</a><a href="#s5" data-spy="s5">Employee advocacy</a><a href="#s6" data-spy="s6">What fails</a><a href="#s7" data-spy="s7">Regulated firms</a><a href="#s8" data-spy="s8">For WorldFirst</a><a href="#s9" data-spy="s9">Method</a></nav>
     <main id="pt-main"></main>

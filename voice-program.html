@@ -58,6 +58,14 @@ a.src { color:var(--ink); text-decoration:none; border-bottom:1px solid #c9c4ba;
 a.src:hover { border-bottom-color:var(--ink); }
 footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; display:flex; gap:18px; }
 @media (max-width:860px) { .wrap { grid-template-columns:1fr; gap:0; } nav.side { position:static; flex-direction:row; flex-wrap:wrap; margin-bottom:18px; } nav.side a { border-left:none; border-bottom:1px solid var(--hair); } .panel { padding:24px 20px; } }
+
+.tabs { margin-top:28px; border-top:1px solid var(--hair); padding-top:16px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:9px 20px; align-items:baseline; }
+.tabs .tg { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); white-space:nowrap; }
+.tabs .ti { display:flex; flex-wrap:wrap; gap:4px 18px; }
+.tabs a { text-decoration:none; color:var(--mut); font-size:13.5px; border-bottom:1px solid transparent; padding-bottom:1px; }
+.tabs a:hover { color:var(--ink); border-bottom-color:#c9c4ba; }
+.tabs .cur { color:var(--ink); font-weight:600; border-bottom:1px solid var(--ink); padding-bottom:1px; font-size:13.5px; }
+@media (max-width:860px) { .tabs { grid-template-columns:1fr; gap:2px; } .tabs .tg { margin-top:10px; } }
 </style>
 </head>
 <body>
@@ -72,9 +80,10 @@ footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; 
 <div class="pt-app" id="pt-app">
   <div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">WorldFirst · Internal · 28 Jul 2026 · <a href="thought-leadership.html">← the research</a> · <a href="peer-pillar-map.html">peer pillar map</a> · <a href="./">direction verdict</a> · <a href="agencies.html">agency shortlist →</a></p>
+      <p class="eyebrow">WorldFirst &middot; Internal &middot; 28 Jul 2026</p>
       <h1>First <em>Voices</em></h1>
       <p class="lede">The WorldFirst plan: three groups of people, 1+1 seats per key country plus the C-suite, LinkedIn only, hard-capped. What it produces, what it costs, and how the seat is sold to the people holding it: effortless for them, run by us.</p>
+    <nav class="tabs"><div class="tg">Direction</div><div class="ti"><a href="./">Verdict</a><a href="platforms.html">Platforms</a><a href="blank-sheet.html">Blank sheet</a></div><div class="tg">Evidence</div><div class="ti"><a href="peer-pillar-map.html">Peer pillar map</a><a href="benchmarks.html">Explainer benchmarks</a></div><div class="tg">Production</div><div class="ti"><a href="episode-panel.html">Episode panel</a><a href="episode-slate.html">Episode slate</a></div><div class="tg">Voice</div><div class="ti"><a href="thought-leadership.html">The research</a><span class="cur">First voices</span><a href="agencies.html">Agency shortlist</a></div></nav>
     </header>
     <nav class="side" id="pt-nav"><a href="#s1" data-spy="s1">The shape</a><a href="#s2" data-spy="s2">The roster</a><a href="#s3" data-spy="s3">Content lanes</a><a href="#s4" data-spy="s4">Cadence</a><a href="#s5" data-spy="s5">Resources</a><a href="#s6b" data-spy="s6b">Budget</a><a href="#s7k" data-spy="s7k">KPIs</a><a href="#s6" data-spy="s6">Selling the seat</a><a href="#s7" data-spy="s7">House rules</a><a href="#s9" data-spy="s9">Rollout</a></nav>
     <main id="pt-main"></main>

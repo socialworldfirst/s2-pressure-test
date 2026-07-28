@@ -67,6 +67,14 @@ a.src { color:var(--ink); text-decoration:none; border-bottom:1px solid #c9c4ba;
 a.src:hover { border-bottom-color:var(--ink); }
 footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; display:flex; gap:18px; }
 @media (max-width:860px) { .wrap { grid-template-columns:1fr; gap:0; } nav.side { position:static; flex-direction:row; flex-wrap:wrap; margin-bottom:18px; } nav.side a { border-left:none; border-bottom:1px solid var(--hair); } .panel { padding:24px 20px; } }
+
+.tabs { margin-top:28px; border-top:1px solid var(--hair); padding-top:16px; display:grid; grid-template-columns:auto minmax(0,1fr); gap:9px 20px; align-items:baseline; }
+.tabs .tg { font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--mut); white-space:nowrap; }
+.tabs .ti { display:flex; flex-wrap:wrap; gap:4px 18px; }
+.tabs a { text-decoration:none; color:var(--mut); font-size:13.5px; border-bottom:1px solid transparent; padding-bottom:1px; }
+.tabs a:hover { color:var(--ink); border-bottom-color:#c9c4ba; }
+.tabs .cur { color:var(--ink); font-weight:600; border-bottom:1px solid var(--ink); padding-bottom:1px; font-size:13.5px; }
+@media (max-width:860px) { .tabs { grid-template-columns:1fr; gap:2px; } .tabs .tg { margin-top:10px; } }
 </style>
 </head>
 <body>
@@ -81,9 +89,10 @@ footer { grid-column:1/-1; color:var(--mut); font-size:12.5px; padding-top:8px; 
 <div class="pt-app" id="pt-app">
   <div class="wrap">
     <header class="masthead">
-      <p class="eyebrow">WorldFirst · Internal · 28 Jul 2026 · <a href="thought-leadership.html">the research</a> · <a href="voice-program.html">first voices</a> · <a href="./">direction verdict</a></p>
+      <p class="eyebrow">WorldFirst &middot; Internal &middot; 28 Jul 2026</p>
       <h1>Agency <em>Shortlist</em></h1>
       <p class="lede">Ten agencies for the First Voices programme, grouped by the job they would do, each with an honest confidence rating. Plus the platform question, what I would actually buy, and the five questions to put to all of them identically.</p>
+    <nav class="tabs"><div class="tg">Direction</div><div class="ti"><a href="./">Verdict</a><a href="platforms.html">Platforms</a><a href="blank-sheet.html">Blank sheet</a></div><div class="tg">Evidence</div><div class="ti"><a href="peer-pillar-map.html">Peer pillar map</a><a href="benchmarks.html">Explainer benchmarks</a></div><div class="tg">Production</div><div class="ti"><a href="episode-panel.html">Episode panel</a><a href="episode-slate.html">Episode slate</a></div><div class="tg">Voice</div><div class="ti"><a href="thought-leadership.html">The research</a><a href="voice-program.html">First voices</a><span class="cur">Agency shortlist</span></div></nav>
     </header>
     <nav class="side" id="pt-nav"><a href="#s1" data-spy="s1">Before you shop</a><a href="#s2" data-spy="s2">The ten</a><a href="#s3" data-spy="s3">Platform, not agency</a><a href="#s4" data-spy="s4">What I would do</a><a href="#s5" data-spy="s5">The five questions</a></nav>
     <main id="pt-main"></main>
